@@ -158,7 +158,6 @@ venv.bak/
 .mypy_cache/
 .dmypy.json
 dmypy.json
-y_footy_analytics_gs_credentials.json
 
 # Pyre type checker
 .pyre/
@@ -206,3 +205,7 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Google Sheets API
+.y_footy_analytics_gs_credentials.json
+y_footy_analytics_gs_credentials.json
