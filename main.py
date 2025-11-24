@@ -2,6 +2,7 @@ import gspread
 import pandas as pd
 import streamlit as st
 import altair as alt
+import y_analytics_data_viz as ydz
 from google.oauth2.service_account import Credentials
 
 # Scopes are used to define the specific operations or accesses you want to have for certain files
@@ -21,13 +22,13 @@ st.write(df)
 st.markdown('##') 
 
 # EPL Points bar chart with desired sorting
-c = alt.Chart(df).mark_bar().encode(x=alt.X("Squad", sort=None), y="Pts")
-st.altair_chart(c, use_container_width=True)
+st.altair_chart(ydz.league_points_bar_chart(df,"Squad","Pts"), use_container_width=True)
 
 # Space seperator
 st.markdown('##') 
 
 # Goal scoring perfomance
+#st.pyplot() 
 st.scatter_chart(df, x="GF", y="xG")
 
 # Place input and display the output
