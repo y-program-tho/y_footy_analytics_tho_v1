@@ -22,7 +22,7 @@ st.write(df)
 st.markdown('##') 
 
 # EPL Points bar chart with desired sorting
-st.altair_chart(ydz.league_points_bar_chart(df,"Squad","Pts"), use_container_width=True)
+ydz.league_points_bar_chart(df,"Squad","Pts")
 
 # Space seperator
 st.markdown('##') 
