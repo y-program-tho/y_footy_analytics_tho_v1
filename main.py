@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import altair as alt
+import y_footy_viz as yfv
 
 st.title("y_footy_analyitics_tho_v1")
 
@@ -56,7 +57,7 @@ league_squad_list = data['Squad'].tolist()
 
 with col1:
     st.write("Select a team:")
-    selected_team = st.selectbox("Team", league_squad_list)
+    selected_team = st.selectbox("Team", league_squad_list, key='a')
 
 with col2:
     st.header(f"{selected_team}'s league rank is:")
@@ -80,4 +81,18 @@ with col6:
     st.header(f"They've conceded:")
     st.header(f"{data[data['Squad'] == selected_team]['GA'].values[0]} goals")
 
+# Spacing
+st.write(" ")
+st.write(" ")
 
+col7, col8 = st.columns(2, gap="medium", vertical_alignment="center")
+
+with col7:
+    st.header(f"Select a team")
+    radar_team_1 = st.selectbox("Team", league_squad_list, key='b')
+
+with col8:
+    st.header(f"Now find a team to comapre them too")
+    radar_team_2 = st.selectbox("Team", league_squad_list, key='c')
+
+st.pyplot(yfv.league_teams_comp_radar(data, radar_team_1, radar_team_2))
