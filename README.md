@@ -8,3 +8,13 @@ The v1 will use teh folowing technolgies:
 - MinIO
 - Streamlit
 - PySpark
+
+Directory structure:
+y_footy_analytics_v1/
+├── app.py
+├── dags
+├── etl
+├── spark_jobs
+├── tests
+├── README.md
+└── requirements.txt
