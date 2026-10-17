@@ -17,3 +17,15 @@ y_footy_analytics_tho_v1
    ├──spark_jobs
    └──unit_tests
 ```
+
+List of technolgies for the project:
+- Python 3.11
+- Apache Spark
+- Apache Airflow
+- ClickHouse
+- Streamlit
+- Pytest
+- Python Logging
+- venv
+- ruff
+- black
